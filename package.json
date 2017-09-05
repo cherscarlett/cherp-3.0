@@ -1,0 +1,67 @@
+{
+  "name": "cherp",
+  "version": "3.0.0",
+  "description": "Personal Website for Cher Stewart",
+  "main": "./node-app/server.js",
+  "scripts": {
+    "start": "nodemon node-app/server.js",
+    "develop": "npm run build",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "webpack --config ./build/webpack.client.config.js --progress",
+    "build:server": "webpack --config ./build/webpack.server.config.js --progress",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=8.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherstewart/cherp2.0.git"
+  },
+  "author": "Cher Stewart  <cher.stewart@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cherstewart/cherp-3.0/issues"
+  },
+  "homepage": "https://github.com/cherstewart/cherp-3.0#readme",
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-env": "^1.5.1",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.28.1",
+    "d3": "^4.10.0",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.3.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "jest": "^20.0.4",
+    "node-sass": "^4.5.2",
+    "postcss-loader": "^2.0.5",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "svg-fill-loader": "0.0.8",
+    "svg-sprite-loader": "^2.0.5",
+    "url-loader": "^0.5.8",
+    "vue-cli": "^2.8.2",
+    "vue-loader": "^12.1.0",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.1",
+    "webpack-merge": "^4.1.0",
+    "webpack-node-externals": "^1.6.0",
+    "webpack-s3-plugin": "^1.0.0-rc.0"
+  },
+  "dependencies": {
+    "@std/esm": "^0.5.1",
+    "axios": "^0.16.2",
+    "compression": "^1.6.2",
+    "connect": "^3.6.3",
+    "gsap": "^1.20.2",
+    "nodemon": "^1.11.0",
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0",
+    "vue-server-renderer": "^2.4.2",
+    "vuex": "^2.3.1",
+    "vuex-router-sync": "^4.2.0"
+  }
+}
